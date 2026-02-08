@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Home, Sparkles, User, LogOut, LogIn } from "lucide-react";
+import { Home, Sparkles, User, LogOut, LogIn, Utensils } from "lucide-react";
 import { authService } from "@/services/authService";
 
 export const Navbar = () => {
@@ -49,6 +49,16 @@ export const Navbar = () => {
                   >
                     <Sparkles className="h-4 w-4" />
                     AI Generator
+                  </Button>
+                </Link>
+                
+                <Link to="/meal-planner">
+                  <Button 
+                    variant={isActive('/meal-planner') ? "default" : "ghost"}
+                    className="flex items-center gap-2"
+                  >
+                    <Utensils className="h-4 w-4" />
+                    Meal Planner
                   </Button>
                 </Link>
                 

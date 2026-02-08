@@ -9,6 +9,7 @@ import Index from '@/pages/Index';
 import Dashboard from '@/pages/Dashboard';
 import Generator from '@/pages/Generator';
 import Profile from '@/pages/Profile';
+import MealPlanner from '@/pages/MealPlanner';
 import Login from '@/pages/Login';
 import NotFound from '@/pages/NotFound';
 import './App.css';
@@ -46,6 +47,14 @@ function App() {
                   element={
                     <ProtectedRoute>
                       <Generator />
+                    </ProtectedRoute>
+                  } 
+                />
+                <Route 
+                  path="/meal-planner" 
+                  element={
+                    <ProtectedRoute>
+                      <MealPlanner />
                     </ProtectedRoute>
                   } 
                 />
